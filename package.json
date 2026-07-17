@@ -1,0 +1,74 @@
+{
+  "name": "living-off-the-land-lolbins-mcp-server",
+  "version": "0.1.0",
+  "description": "Living off the Land binaries MCP server — GTFOBins, LOLBAS, LOOBins, LOLDrivers, LOLRMM, LOLESXi, LOTP, LOLC2, WADComs intelligence with attack graph reasoning, privilege escalation paths, defense evasion, detection engineering",
+  "type": "module",
+  "bin": {
+    "living-off-the-land-lolbins-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "data/"
+  ],
+  "scripts": {
+    "dev": "bun --watch run src/index.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "snapshot": "bun run src/scripts/snapshot.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "living-off-the-land",
+    "lolbins",
+    "lolbas",
+    "gtfobins",
+    "loobins",
+    "loldrivers",
+    "lolrmm",
+    "lolesxi",
+    "lolc2",
+    "wadcoms",
+    "lotp",
+    "loflcab",
+    "privilege-escalation",
+    "defense-evasion",
+    "lateral-movement",
+    "persistence",
+    "attack-graph",
+    "mitre-attck",
+    "red-team",
+    "blue-team",
+    "purple-team",
+    "detection-engineering",
+    "sigma",
+    "sysmon",
+    "pentest",
+    "offensive-security",
+    "osint",
+    "cybersecurity",
+    "security",
+    "infosec",
+    "ai",
+    "ai-agent",
+    "claude",
+    "llm"
+  ],
+  "author": "Orhan Yildirim <contact@orhanyildirim.us> (https://orhanyildirim.us)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badchars/living-off-the-land-lolbins-mcp-server.git"
+  },
+  "homepage": "https://www.npmjs.com/package/living-off-the-land-lolbins-mcp-server",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "yaml": "^2.7.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.10",
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.2"
+  }
+}

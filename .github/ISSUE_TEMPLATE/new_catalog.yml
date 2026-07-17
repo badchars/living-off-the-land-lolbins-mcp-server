@@ -1,0 +1,65 @@
+name: New Catalog Integration
+description: Suggest a new LOL catalog or data source integration
+title: "[Catalog] "
+labels: ["enhancement", "new-catalog"]
+
+body:
+  - type: input
+    id: catalog-name
+    attributes:
+      label: Catalog name
+      description: Name of the LOL catalog or data source.
+      placeholder: "e.g., WTFBins, LOTS Project, MalAPI"
+    validations:
+      required: true
+
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL
+      description: Link to the catalog website or repository.
+      placeholder: "https://github.com/example/lol-catalog"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data-format
+    attributes:
+      label: Data format
+      description: How is the catalog data structured?
+      options:
+        - JSON API
+        - YAML files
+        - HTML scrape
+        - CSV / TSV
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: estimated-entries
+    attributes:
+      label: Estimated entries
+      description: Roughly how many entries does this catalog contain?
+      placeholder: "e.g., ~200 binaries, ~50 drivers"
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggested-tools
+    attributes:
+      label: Suggested tools
+      description: What tools could be built on top of this catalog?
+      placeholder: |
+        - catalog_search: Search for ...
+        - catalog_lookup: Look up ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: why-valuable
+    attributes:
+      label: Why this catalog?
+      description: What makes this catalog valuable for LOL binary intelligence and detection engineering?
+    validations:
+      required: true
